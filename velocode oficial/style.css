@@ -1408,3 +1408,83 @@ body{
     font-size:25px;
   }
 }
+
+
+/* =====================================================
+   AJUSTE FINAL MOBILE - CARROSSEL E HERO
+   Correção feita para evitar cards cortados e preview gigante
+===================================================== */
+@media(max-width:768px){
+  .portfolio-track{
+    display:flex !important;
+    gap:18px !important;
+    overflow-x:auto !important;
+    scroll-snap-type:x mandatory !important;
+    scroll-behavior:smooth !important;
+    padding:4px 15px 18px !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+  }
+
+  .portfolio-card{
+    flex:0 0 calc(100% - 30px) !important;
+    width:calc(100% - 30px) !important;
+    margin:0 auto !important;
+    scroll-snap-align:center !important;
+  }
+
+  .portfolio-prev{
+    left:10px !important;
+  }
+
+  .portfolio-next{
+    right:10px !important;
+  }
+
+  .portfolio-arrow{
+    top:52% !important;
+    width:42px !important;
+    height:42px !important;
+    font-size:30px !important;
+    background:rgba(4,6,9,.92) !important;
+    border:1px solid rgba(124,255,43,.35) !important;
+  }
+}
+
+@media(max-width:560px){
+  .preview-area{
+    min-height:320px !important;
+    overflow:hidden !important;
+  }
+
+  .laptop{
+    width:100% !important;
+    max-width:100% !important;
+    transform:none !important;
+  }
+
+  .phone{
+    width:85px !important;
+    height:175px !important;
+    right:4px !important;
+    bottom:10px !important;
+  }
+
+  .portfolio-card{
+    flex:0 0 calc(100% - 30px) !important;
+    width:calc(100% - 30px) !important;
+    margin:0 auto !important;
+  }
+
+  .portfolio-card .cover{
+    min-height:210px !important;
+  }
+
+  .portfolio-card-body{
+    padding:20px !important;
+  }
+
+  .project-link{
+    min-width:150px !important;
+  }
+}
