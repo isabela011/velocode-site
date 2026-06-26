@@ -1410,81 +1410,54 @@ body{
 }
 
 
-/* =====================================================
-   AJUSTE FINAL MOBILE - CARROSSEL E HERO
-   Correção feita para evitar cards cortados e preview gigante
-===================================================== */
-@media(max-width:768px){
-  .portfolio-track{
+/* ===== MOBILE FINAL OVERRIDE ===== */
+@media (max-width:768px){
+  .hero{
     display:flex !important;
-    gap:18px !important;
-    overflow-x:auto !important;
-    scroll-snap-type:x mandatory !important;
-    scroll-behavior:smooth !important;
-    padding:4px 15px 18px !important;
-    width:100% !important;
-    box-sizing:border-box !important;
+    flex-direction:column !important;
+    gap:28px !important;
+    padding:110px 0 50px !important;
+    min-height:auto !important;
   }
-
-  .portfolio-card{
-    flex:0 0 calc(100% - 30px) !important;
-    width:calc(100% - 30px) !important;
-    margin:0 auto !important;
-    scroll-snap-align:center !important;
-  }
-
-  .portfolio-prev{
-    left:10px !important;
-  }
-
-  .portfolio-next{
-    right:10px !important;
-  }
-
-  .portfolio-arrow{
-    top:52% !important;
-    width:42px !important;
-    height:42px !important;
-    font-size:30px !important;
-    background:rgba(4,6,9,.92) !important;
-    border:1px solid rgba(124,255,43,.35) !important;
-  }
-}
-
-@media(max-width:560px){
   .preview-area{
-    min-height:320px !important;
-    overflow:hidden !important;
+    min-height:280px !important;
+    width:100%;
+    overflow:hidden;
   }
-
   .laptop{
-    width:100% !important;
     max-width:100% !important;
+    width:100% !important;
     transform:none !important;
   }
-
   .phone{
-    width:85px !important;
-    height:175px !important;
-    right:4px !important;
-    bottom:10px !important;
+    width:82px !important;
+    height:170px !important;
+    right:8px !important;
+    bottom:0 !important;
   }
-
+  .portfolio-track{
+    display:flex !important;
+    overflow-x:auto !important;
+    gap:16px !important;
+    padding:0 16px 20px !important;
+    scroll-snap-type:x mandatory;
+  }
   .portfolio-card{
-    flex:0 0 calc(100% - 30px) !important;
-    width:calc(100% - 30px) !important;
-    margin:0 auto !important;
+    flex:0 0 calc(100% - 32px) !important;
+    width:calc(100% - 32px) !important;
+    scroll-snap-align:center;
   }
-
-  .portfolio-card .cover{
-    min-height:210px !important;
+  .portfolio-arrow{
+    width:40px !important;
+    height:40px !important;
+    font-size:28px !important;
   }
-
-  .portfolio-card-body{
-    padding:20px !important;
+}
+@media (max-width:560px){
+  h1{
+    font-size:38px !important;
   }
-
-  .project-link{
-    min-width:150px !important;
+  .preview-area{
+    min-height:240px !important;
   }
 }
