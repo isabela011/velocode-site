@@ -1039,3 +1039,87 @@ textarea{
     font-size:30px;
   }
 }
+
+
+/* =====================================================
+   CAPAS DO PORTFÓLIO COM IMAGENS REAIS POR NICHO
+===================================================== */
+.portfolio-card .cover{
+  min-height:245px;
+  position:relative;
+  overflow:hidden;
+  background-size:cover !important;
+  background-position:center !important;
+  display:flex;
+  align-items:flex-end;
+  padding:0;
+}
+
+.portfolio-card .cover::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(4,6,9,.08) 0%, rgba(4,6,9,.25) 45%, rgba(4,6,9,.88) 100%);
+  z-index:1;
+}
+
+.portfolio-card .cover div{
+  position:relative;
+  z-index:2;
+  width:100%;
+  margin:0;
+  padding:18px 20px;
+  border-radius:0;
+  background:linear-gradient(180deg, rgba(4,6,9,.18), rgba(4,6,9,.86));
+  backdrop-filter:blur(8px);
+  color:#fff;
+}
+
+.portfolio-card .cover small{
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:11px;
+}
+
+.portfolio-card .cover h4{
+  color:#fff;
+  text-shadow:0 3px 18px rgba(0,0,0,.55);
+}
+
+.portfolio-card .cover p{
+  color:#d8dee8;
+  margin-top:6px;
+}
+
+.bruna-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&q=80') !important;
+}
+.restaurante-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80') !important;
+}
+.advocacia-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&q=80') !important;
+}
+.petshop-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=900&q=80') !important;
+}
+.imobiliaria-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&q=80') !important;
+}
+.academia-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80') !important;
+}
+.contabilidade-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&q=80') !important;
+}
+.estetica-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=80') !important;
+}
+.odonto-cover .cover{
+  background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&q=80') !important;
+}
+
+.project-link{
+  color:#031006 !important;
+}
