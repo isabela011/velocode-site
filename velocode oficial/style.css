@@ -1123,3 +1123,389 @@ textarea{
 .project-link{
   color:#031006 !important;
 }
+
+
+
+/* =====================================================
+   AJUSTES FINAIS DE RESPONSIVIDADE - VELOCODE
+   Garante layout limpo em notebook, tablet e celular
+===================================================== */
+
+html, body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+img, video, iframe{
+  max-width:100%;
+}
+
+.header{
+  max-width:calc(100% - 24px);
+}
+
+main{
+  overflow:hidden;
+}
+
+/* Botões e textos não estouram no mobile */
+.btn,
+.header-btn,
+.project-link,
+.form button{
+  white-space:normal;
+  text-align:center;
+}
+
+/* Hero mais estável */
+.hero-text{
+  min-width:0;
+}
+
+.preview-area,
+.laptop,
+.laptop-screen,
+.real-site,
+.phone{
+  max-width:100%;
+}
+
+.real-site h2,
+.phone-site h3{
+  word-break:normal;
+  overflow-wrap:break-word;
+}
+
+/* Carrossel mais seguro */
+.portfolio-carousel{
+  width:100%;
+  max-width:100%;
+}
+
+.portfolio-track{
+  max-width:100%;
+  -webkit-overflow-scrolling:touch;
+}
+
+.portfolio-card{
+  min-width:0;
+}
+
+.portfolio-card-body p{
+  min-height:auto;
+}
+
+.portfolio-card .cover{
+  min-height:220px;
+}
+
+/* Setas não atrapalham os cards */
+.portfolio-arrow{
+  display:grid;
+  place-items:center;
+}
+
+/* Formulário */
+.form input,
+.form textarea{
+  min-width:0;
+}
+
+/* Tablets */
+@media(max-width:1024px){
+  .hero{
+    gap:36px;
+  }
+
+  h1{
+    font-size:clamp(42px, 8vw, 68px);
+  }
+
+  .preview-area{
+    min-height:500px;
+  }
+
+  .portfolio-track{
+    grid-auto-columns:calc((100% - 18px) / 2);
+  }
+}
+
+/* Celular e telas estreitas */
+@media(max-width:768px){
+  .header{
+    top:10px;
+    width:calc(100% - 20px);
+    padding:10px 14px;
+    border-radius:24px;
+  }
+
+  .brand{
+    font-size:16px;
+  }
+
+  .brand span{
+    width:30px;
+    height:30px;
+  }
+
+  .hero{
+    width:calc(100% - 24px);
+    min-height:auto;
+    padding:112px 0 58px;
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .hero-text{
+    text-align:left;
+  }
+
+  h1{
+    font-size:clamp(38px, 12vw, 52px);
+    line-height:.95;
+    letter-spacing:-.06em;
+  }
+
+  h2{
+    font-size:clamp(30px, 9vw, 42px);
+  }
+
+  .hero-text p,
+  .intro p,
+  .contact > div > p{
+    font-size:16px;
+  }
+
+  .actions{
+    width:100%;
+  }
+
+  .actions .btn{
+    flex:1 1 100%;
+  }
+
+  .metrics{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
+  }
+
+  .metrics div{
+    min-width:0;
+    padding:10px;
+  }
+
+  .metrics span{
+    font-size:12px;
+  }
+
+  .preview-area{
+    order:0;
+    min-height:auto;
+    padding:20px 0 10px;
+  }
+
+  .preview-area::before{
+    width:330px;
+    height:330px;
+  }
+
+  .laptop{
+    width:100%;
+    transform:none;
+  }
+
+  .laptop-screen{
+    padding:9px;
+    border-radius:18px 18px 10px 10px;
+  }
+
+  .real-site header{
+    height:42px;
+    padding:0 14px;
+  }
+
+  .real-site nav{
+    display:none;
+  }
+
+  .real-site section{
+    padding:22px 18px 18px;
+  }
+
+  .real-site h2{
+    font-size:26px;
+    line-height:1;
+  }
+
+  .real-site p{
+    font-size:12px;
+  }
+
+  .phone{
+    display:none;
+  }
+
+  .laptop-base{
+    height:20px;
+  }
+
+  .intro,
+  .contact{
+    gap:26px;
+  }
+
+  .section{
+    width:calc(100% - 24px);
+    padding:64px 0;
+  }
+
+  .services,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .services article,
+  .steps div,
+  .form{
+    border-radius:22px;
+  }
+
+  .portfolio-heading{
+    display:block;
+  }
+
+  .portfolio-heading p{
+    margin-top:14px;
+    font-size:15px;
+  }
+
+  .portfolio-carousel{
+    margin-top:24px;
+    padding:0 0 58px;
+  }
+
+  .portfolio-track{
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns:88%;
+    gap:16px;
+    overflow-x:auto;
+    padding:4px 4px 14px;
+    scroll-padding-left:4px;
+  }
+
+  .portfolio-card{
+    border-radius:22px;
+  }
+
+  .portfolio-card .cover{
+    min-height:190px;
+  }
+
+  .portfolio-card .cover div{
+    padding:16px;
+  }
+
+  .portfolio-card .cover h4{
+    font-size:24px;
+  }
+
+  .portfolio-card-body{
+    padding:18px;
+  }
+
+  .portfolio-card-body h3{
+    font-size:21px;
+  }
+
+  .portfolio-card-body p{
+    font-size:14px;
+  }
+
+  .project-link{
+    width:100%;
+    min-height:44px;
+  }
+
+  .portfolio-arrow{
+    top:auto;
+    bottom:0;
+    transform:none;
+    width:44px;
+    height:44px;
+    font-size:30px;
+  }
+
+  .portfolio-prev{
+    left:calc(50% - 54px);
+  }
+
+  .portfolio-next{
+    right:calc(50% - 54px);
+  }
+
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+  .float-whatsapp{
+    width:54px;
+    height:54px;
+    right:14px;
+    bottom:14px;
+  }
+}
+
+/* Celulares muito pequenos */
+@media(max-width:430px){
+  .header{
+    grid-template-columns:auto auto;
+  }
+
+  .nav{
+    top:62px;
+  }
+
+  .hero{
+    width:calc(100% - 18px);
+  }
+
+  .section{
+    width:calc(100% - 18px);
+  }
+
+  .label{
+    font-size:12px;
+  }
+
+  h1{
+    font-size:38px;
+  }
+
+  .hero-text p{
+    margin-top:18px;
+  }
+
+  .metrics{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio-track{
+    grid-auto-columns:92%;
+  }
+
+  .portfolio-card .cover{
+    min-height:176px;
+  }
+
+  .cover p,
+  .portfolio-card .cover p{
+    display:none;
+  }
+
+  .footer{
+    width:calc(100% - 24px);
+  }
+}
